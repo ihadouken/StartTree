@@ -1,0 +1,19 @@
+font_size: 22
+theme: void
+tree_1:
+  general:
+    github: "https://www.github.com/"
+    gmail: "https://mail.google.com/"
+  reddit:
+    frontpage: 
+      - "https://www.reddit.com/"
+      - "front page"
+    unixporn: "https://www.reddit.com/r/unixporn/"
+tree_2:
+  other:
+    archwiki: 
+      - "https://archlinux.org/"
+      - "arch wiki"
+    hulu: "https://www.hulu.com/"
+    netflix: "https://www.netflix.com/"
+    youtube: "https://www.youtube.com/"
