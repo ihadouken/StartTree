@@ -11,7 +11,7 @@ home = expanduser("~")
 
 # install script will fill this in
 # replace line
-repo_dir = os.environ["MY_SRC_DIR"] + "/StartTree"
+repo_dir = "/home/hadouken/.local/src/StartTree"
 
 # get config path
 config_dir = home + '/.config/StartTree'
