@@ -4,9 +4,13 @@ config_dir=$HOME/.config/StartTree
 config_path=$HOME/.config/StartTree/config.yaml
 cache_dir=$HOME/.cache/StartTree
 
-# install pip reqs
-echo "Downloading pip dependencies..."
-pip install --user bs4
+# install python reqs
+echo "Downloading python dependencies..."
+if [ "$(cat /etc/os-release | grep '^NAME' | cut -d '=' -f 2)" = '"Arch Linux"' -a "$(command -v yay)" ]; then
+    yay -S python-bs4
+else
+    echo '[IMPORTANT]: Please install "python-bs4"'
+fi
 
 # check if .config path exists
 if [ ! -d "$HOME/.config" ]; then
