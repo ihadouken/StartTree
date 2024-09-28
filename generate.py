@@ -93,7 +93,11 @@ def gen_html(file_dict):
     cache_html.seek(0)
     pretty_string = cache_html.read()
     pretty_string = prettifyHTML(pretty_string)
+
+    # Process placeholders in skeleton HTML.
+    pretty_string = pretty_string.format(username=os.getlogin(), hostname=os.uname().nodename)
     cache_html.close()
+
     cache_html = open(cache_dir + '/index.html', 'w')
     cache_html.write(pretty_string)
 
